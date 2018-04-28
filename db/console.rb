@@ -24,15 +24,16 @@ customer1.save()
 customer2 = Customer.new({
 
   'name' => 'BOB',
-  'funds' => '200'
+  'funds' => '400'
 
   })
 
 customer2.save()
+
 customer3 = Customer.new({
 
   'name' => 'Jeff',
-  'funds' => '150'
+  'funds' => '350'
 
   })
 
@@ -48,7 +49,7 @@ customer4.save()
 customer5 = Customer.new({
 
   'name' => 'Rachel',
-  'funds' => '75'
+  'funds' => '900'
 
   })
 

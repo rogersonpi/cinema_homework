@@ -51,6 +51,16 @@ sql =  'SELECT films.* FROM customers
   return result
 end
 
+def tickets_bought()
+sql =  'SELECT tickets.* FROM customers
+     INNER JOIN tickets ON customers.id = tickets.customer_id
+     WHERE customers.id = $1'
+  values = [@id]
+  results = SqlRunner.run(sql, values)
+  return results.count
+  # result = results.map{|hash| Tickets.new(hash)}
+  # return result.count
+end
 
 def self.all()
   sql = "SELECT * FROM customers"

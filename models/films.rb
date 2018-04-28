@@ -52,6 +52,18 @@ def find_customers()
   return result
 end
 
+def no_of_customers()
+
+  sql = 'SELECT customers.* FROM films
+  INNER JOIN tickets ON films.id = tickets.film_id INNER JOIN customers ON
+  tickets.customer_id = customers.id WHERE films.id = $1'
+  values = [@id]
+  results = SqlRunner.run(sql, values)
+  result = results.map{|hash| Customer.new(hash)}
+  result = result.count
+  return result
+end
+
 def self.all()
   sql = "SELECT * FROM films"
   film_hashes = SqlRunner.run(sql)
