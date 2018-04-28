@@ -41,23 +41,7 @@ end
     tickets_update = SqlRunner.run(sql, values)
 
   end
-
-  # def update()
-  #
-  #   sql = "
-  #   UPDATE tickets SET (
-  #     customer_id,
-  #     film_id,
-  #   ) =
-  #   (
-  #     $1,$2,
-  #   )
-  #   WHERE id = $3"
-  #   values = [@first_name, @last_name, @topping, @quantity, @id]
-  #   customer_update = SqlRunner.run(sql, values)
-#end
-
-#  class methods
+# class methods
 
   def self.all()
     sql = "SELECT * FROM tickets"
@@ -76,5 +60,7 @@ def self.delete_all()
   sql = "DELETE FROM tickets"
   SqlRunner.run(sql)
 end
+
+
 
 end

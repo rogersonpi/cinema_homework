@@ -12,6 +12,7 @@ def initialize(options)
 
 end
 
+
 def save()
 
   sql = "INSERT INTO films (title, price)
@@ -21,6 +22,22 @@ def save()
   values = [@title, @price]
   result = SqlRunner.run(sql, values)
   @id = result [0]['id'].to_i
+
+end
+
+def update()
+
+  sql = "
+  UPDATE films SET (
+    title,
+    price
+  ) =
+  (
+    $1, $2
+  )
+  WHERE id = $3"
+  values = [@title, @price, @id]
+  tickets_update = SqlRunner.run(sql, values)
 
 end
 
@@ -35,6 +52,13 @@ def self.map_items(film_hashes)
     self.new(film_hash)}
     return result
 end
+
+def self.delete_all()
+  sql = "DELETE FROM films"
+  SqlRunner.run(sql)
+end
+
+
 
 
 end

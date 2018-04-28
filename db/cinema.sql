@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS screenings;
 DROP TABLE IF EXISTS tickets;
 DROP TABLE IF EXISTS films;
 DROP TABLE IF EXISTS customers;
@@ -22,4 +23,10 @@ CREATE TABLE tickets (
   customer_id INT4,
   film_id INT4
 
-)
+);
+
+CREATE TABLE screenings (
+  id SERIAL4 PRIMARY KEY,
+  screening VARCHAR (255),
+  film_id INT4
+);
