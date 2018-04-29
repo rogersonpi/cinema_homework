@@ -2,6 +2,7 @@ require("pry")
 require_relative("../models/customer")
 require_relative("../models/films")
 require_relative("../models/ticket")
+# require_relative("../models/screenings")
 
 Film.all()
 Customer.all()
@@ -116,6 +117,44 @@ ticket5 = Ticket.new({
 
   })
 ticket5.save()
+
+# screening1 = Screenings.new({
+# 'film_id' => film1.id,
+# 'screening' =>'13:30 - 15:20',
+# #'title' => film1.title
+#
+#   })
+# screening1.save()
+#
+# screening2 = Screenings.new({
+# 'film_id' => film2.id,
+# 'screening' => '11:30 - 13:20',
+# #'title' => film2.title
+#
+#   })
+# screening2.save()
+# screening3 = Screenings.new({
+# 'film_id' => film3.id,
+# 'screening' => '14:30 - 16:20',
+# #'title' => film3.title
+#
+#   })
+# screening3.save()
+# film4_screening = Screenings.new({
+# 'film_id' => film4.id,
+# 'screening' => '15:30 - 17:45',
+# #'title' => film4.title
+#
+#   })
+# screening4.save()
+# film5_screening = Screenings.new({
+# 'film_id' => film5.id,
+# 'screening' => '21:30 - 22:20',
+# #'title' => film5.title
+#
+#   })
+# screening5.save()
+
 
 binding.pry
 nil

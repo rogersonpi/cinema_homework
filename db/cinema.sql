@@ -29,4 +29,5 @@ CREATE TABLE screenings (
   id SERIAL4 PRIMARY KEY,
   screening VARCHAR (255),
   film_id INT4
+  --title VARCHAR (255)
 );
