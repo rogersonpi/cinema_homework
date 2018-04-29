@@ -24,6 +24,15 @@ def save()
 
 end
 
+# def debit_funds
+#   sql = "UPDATE customers SET (name, funds)
+#   = ($1, $2) WHERE id = $3"
+#   values [@name, @funds, @id]
+#   funds = SQLRunner.run(sql, values)
+#   @funds = funds [0]['funds'].to_1 - 300
+#
+# end
+
 
 def update()
 
